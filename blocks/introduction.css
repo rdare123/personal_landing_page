@@ -1,15 +1,37 @@
 .introduction {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .introduction__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: auto 0;
 }
 
 .introduction__img {
-    height: 190px;
-    width: 190px;
+  max-width: 175px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.introduction__title {
+  margin: 0;
+  font-size: 88px;
+  line-height: 0.57;
+  color: #ffffffbb;
+}
+
+.introduction__subtitle {
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 26px;
+  line-height: 0.5;
+  color: #ffffffbb;
+}
+
+.introduction__body {
+  font-family: "Rajdhani", Arial, sans-serif;
+  margin: 15px 0 0 0;
+  color: #ffffffbb;
 }

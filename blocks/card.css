@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card__img:hover {
+  opacity: 0.75;
+  transition: 0.3s ease-in-out;
+}
+
+.card__caption {
+  font-family: "Rajdhani", Arial, sans-serif;
+  color: #ffffff;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.card__caption:hover {
+  color: #b21500;
+  opacity: 0.75;
+  transition: 0.3s ease-in-out;
+}

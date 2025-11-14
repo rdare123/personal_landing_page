@@ -1,13 +1,37 @@
 .cards {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .cards__title {
+  align-self: center;
+  color: #ffffff;
+  margin: 0;
+}
 
+.cards__contact {
+  font-family: "Rajdhani", Arial, sans-serif;
+  align-self: center;
+  color: #ffffff;
+  margin: 16px 0 0 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.cards__contact:hover {
+  color: #b21500;
+  opacity: 0.75;
+  transition: 0.3s ease-in-out;
 }
 
 .cards__container {
-    display: grid;
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(auto-fit, 413px);
+  column-gap: 20px;
+  row-gap: 40px;
+  padding: 0 0 40px 0;
+  justify-content: center;
+  width: 100%;
 }

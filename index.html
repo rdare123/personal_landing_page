@@ -1,45 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Metrophobic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./pages/index.css" />
     <title>Ryan's Landing Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="page">
-        <header class="header">
-            <nav class="header__nav"></nav>
-            <div class="header__introduction introduction">
-                <img src="./images/profile_picture.jpg" alt="" class="introduction__img">
-                <div class="introduction__content">
-                    <h1 class="introduction__title">Meet Ryan<span class="introduction__subtitle">SOFTWARE ENGINEER & MULTIHOBBYIST</span></h1>
-                    <p class="introduction__body"><span class="introduction__quote">"</span>Ever since I was able to understand what an application even is, I was curious about how they worked. As soon as I got a device of my own, I started poking around in apps and seeing what made their gears turn. As time went on, I got more and more invested in the world of software engineering, which has led me to the life I live today.</p>
-                </div>
-            </div>
-        </header>
+      <header class="header">
+        <nav class="header__nav">
+          <p class="header__logo">MY PORTFOLIO</p>
+          <p class="header__contact">Contact Me</p>
+        </nav>
+        <div class="header__introduction introduction">
+          <img
+            src="./images/profile_picture.jpg"
+            alt=""
+            class="introduction__img"
+          />
+          <div class="introduction__content">
+            <h1 class="introduction__title">
+              Meet Ryan<br /><span class="introduction__subtitle"
+                >SOFTWARE ENGINEER & MULTI-HOBBYIST</span
+              >
+            </h1>
+            <p class="introduction__body">
+              Ever since I was able to understand what an application even is, I
+              was curious about how they worked. As soon as I got a device of my
+              own, I started poking around in apps and seeing what made their
+              gears turn. As time went on, I got more and more invested in the
+              world of software engineering, which has led me to the life I live
+              today.
+            </p>
+          </div>
+        </div>
+      </header>
 
-        <div class="page__divider"></div>
+      <div class="page__divider"></div>
 
+      <main class="content">
         <section class="cards">
-            <h2 class="cards__title">My Personal Projects</h2>
-            <ul class="cards__container">
-                <li class="cards__card card">
-                    <img alt="" class="card__img">
-                    <p class="card__title"></p>
-                    <p class="card__caption"></p>
-                </li>
-            </ul>
+          <h2 class="cards__title">My Photography</h2>
+          <p class="cards__contact">Want a photo done? Contact me!</p>
+          <ul class="cards__container">
+            <template id="card-template">
+              <li class="cards__card card">
+                <img alt="" class="card__img" />
+                <p class="card__title"></p>
+                <p class="card__caption"></p>
+              </li>
+            </template>
+          </ul>
         </section>
+      </main>
 
-        <div class="page__divider"></div>
+      <div class="page__divider"></div>
 
-        <footer class="footer">
-            <ul class="footer__contacts">
-            </ul>
+      <footer class="footer">
+        <ul class="footer__contacts">
+          <li class="footer__list">
+            <a class="footer__item" href="https://www.x.com/emotatertot__"
+              >TWITTER</a
+            >
+            <a
+              class="footer__item"
+              href="https://www.instagram.com/emo_tater_tot"
+              >INSTAGRAM</a
+            >
+            <a class="footer__item" href="https://www.tiktok.com/@bookitty719"
+              >TIKTOK</a
+            >
+          </li>
+        </ul>
 
-            <p class="footer__copyright"></p>
-        </footer>
+        <p class="footer__copyright"></p>
+      </footer>
     </div>
-</body>
+
+    <div class="modal" id="preview-modal">
+      <div class="modal__img-container">
+        <button class="modal__close-btn" type="button"></button>
+        <img alt="Close" class="modal__image" />
+        <div class="modal__caption-bg">
+          <p class="modal__caption"></p>
+          <p class="modal__caption-gear"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>

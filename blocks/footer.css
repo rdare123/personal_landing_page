@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.footer__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.footer__item {
+  font-family: "Rajdhani", Arial, sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+
+.footer__item:hover {
+  color: #b21500;
+  opacity: 0.75;
+  transition: 0.3s ease-in-out;
+}
