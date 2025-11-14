@@ -6,3 +6,7 @@
     margin: 0 auto;
     background-color: #212121;
 }
+
+.page__divider {
+    border-bottom: #ffffff solid 2px;
+}
