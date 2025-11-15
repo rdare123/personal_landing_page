@@ -14,11 +14,11 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  gap: 20px;
 }
 
 .footer__item {
   font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 16px;
   text-decoration: none;
   background-color: transparent;
   border-radius: 8px;
@@ -30,4 +30,10 @@
 .footer__item:hover {
   background-color: #21212121;
   transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 627px) {
+  .footer__item {
+    font-size: 13px;
+  }
 }
