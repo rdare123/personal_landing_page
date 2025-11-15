@@ -30,11 +30,10 @@
             class="introduction__img"
           />
           <div class="introduction__content">
-            <h1 class="introduction__title">
-              Meet Ryan<br /><span class="introduction__subtitle"
-                >SOFTWARE ENGINEER & MULTI-HOBBYIST</span
-              >
-            </h1>
+            <h1 class="introduction__title">Meet Ryan</h1>
+            <p class="introduction__subtitle">
+              SOFTWARE ENGINEER & MULTI-HOBBYIST
+            </p>
             <p class="introduction__body">
               Ever since I was able to understand what an application even is, I
               was curious about how they worked. As soon as I got a device of my
@@ -52,13 +51,17 @@
       <main class="content">
         <section class="cards">
           <h2 class="cards__title">My Photography</h2>
-          <p class="cards__contact">Want a photo done? Contact me!</p>
+          <a type="button" class="cards__contact"
+            >Want a photo done? Contact me!</a
+          >
           <ul class="cards__container">
             <template id="card-template">
               <li class="cards__card card">
                 <img alt="" class="card__img" />
-                <p class="card__title"></p>
-                <p class="card__caption"></p>
+                <div class="card__caption-ln">
+                  <button type="button" class="card__caption"></button>
+                  <a target="_blank" href="" class="card__open-ext"></a>
+                </div>
               </li>
             </template>
           </ul>
@@ -70,16 +73,29 @@
       <footer class="footer">
         <ul class="footer__contacts">
           <li class="footer__list">
-            <a class="footer__item" href="https://www.x.com/emotatertot__"
+            <a
+              class="footer__item"
+              target="_blank"
+              href="https://www.x.com/emotatertot__"
               >TWITTER</a
             >
             <a
               class="footer__item"
+              target="_blank"
               href="https://www.instagram.com/emo_tater_tot"
               >INSTAGRAM</a
             >
-            <a class="footer__item" href="https://www.tiktok.com/@bookitty719"
+            <a
+              class="footer__item"
+              target="_blank"
+              href="https://www.tiktok.com/@bookitty719"
               >TIKTOK</a
+            >
+            <a
+              class="footer__item"
+              target="_blank"
+              href="https://github.com/rdare123"
+              >GITHUB</a
             >
           </li>
         </ul>

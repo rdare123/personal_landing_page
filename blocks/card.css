@@ -1,12 +1,13 @@
 .card {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .card__img {
   aspect-ratio: 1/1;
   object-fit: cover;
-  width: 100%;
+  max-width: 330px;
   border-radius: 8px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
@@ -17,16 +18,51 @@
   transition: 0.3s ease-in-out;
 }
 
+.card__caption-ln {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
 .card__caption {
   font-family: "Rajdhani", Arial, sans-serif;
+  background-color: transparent;
   color: #ffffff;
-  margin: 0 auto;
+  margin: 8px auto 0;
+  padding: 4px 8px;
+  transition: 0.3s ease-in-out;
+  max-width: 100%;
+  border: none;
+  border-radius: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card__open-ext {
+  font-family: "Rajdhani", Arial, sans-serif;
+  background-color: #21212121;
+  color: #ffffff;
+  text-decoration: none;
   cursor: pointer;
+  margin: 8px auto 0;
+  padding: 4px 8px;
+  transition: 0.3s ease-in-out;
+  border: none;
+  border-radius: 8px;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card__open-ext:hover {
+  background-color: #21212145;
   transition: 0.3s ease-in-out;
 }
 
-.card__caption:hover {
-  color: #b21500;
-  opacity: 0.75;
-  transition: 0.3s ease-in-out;
+@media screen and (max-width: 627px) {
+  .card {
+    width: 80%;
+  }
 }

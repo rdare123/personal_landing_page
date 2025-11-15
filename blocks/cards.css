@@ -13,25 +13,29 @@
 .cards__contact {
   font-family: "Rajdhani", Arial, sans-serif;
   align-self: center;
+  background-color: transparent;
   color: #ffffff;
   margin: 16px 0 0 0;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  padding: 4px 8px;
+  transition: 0.3s ease-in-out;
+  border: none;
+  border-radius: 8px;
 }
 
 .cards__contact:hover {
-  color: #b21500;
-  opacity: 0.75;
+  background-color: #21212120;
   transition: 0.3s ease-in-out;
 }
 
 .cards__container {
   display: grid;
   list-style-type: none;
-  grid-template-columns: repeat(auto-fit, 413px);
+  grid-template-columns: repeat(auto-fit, 330px);
   column-gap: 20px;
   row-gap: 40px;
-  padding: 0 0 40px 0;
+  padding: 0;
   justify-content: center;
   width: 100%;
 }

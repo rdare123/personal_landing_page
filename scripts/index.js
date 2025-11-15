@@ -19,6 +19,16 @@ const photoCards = [
     link: "https://i.redd.it/xmbdntunvrkf1.jpeg",
     gear: "Canon Rebel EOS T6",
   },
+  {
+    name: "False Sunflower",
+    link: "https://pbs.twimg.com/media/GzMvDLTXkAAam57?format=jpg&name=large",
+    gear: "Canon Rebel EOS T6",
+  },
+  {
+    name: "Path Lights",
+    link: "https://pbs.twimg.com/media/GzMvDO4XgAEuuOe?format=jpg&name=large",
+    gear: "Canon Rebel EOS T6",
+  },
 ];
 
 const photoModal = document.querySelector("#preview-modal");
@@ -47,10 +57,13 @@ function closeModal(modal) {
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitle = cardElement.querySelector(".card__caption");
+  const cardOpenLink = cardElement.querySelector(".card__open-ext");
   const cardImage = cardElement.querySelector(".card__img");
 
   cardImage.src = data.link;
   cardImage.alt = data.name;
+  cardOpenLink.textContent = data.link;
+  cardOpenLink.href = data.link;
   cardTitle.textContent = data.name;
 
   cardImage.addEventListener("click", () => {
