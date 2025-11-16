@@ -6,7 +6,8 @@
 
 .cards__title {
   align-self: center;
-  color: #ffffff;
+  text-align: center;
+  color: #ffffffbb;
   margin: 0;
 }
 
@@ -14,12 +15,11 @@
   font-family: "Rajdhani", Arial, sans-serif;
   align-self: center;
   background-color: transparent;
-  color: #ffffff;
+  color: #ffffffbb;
   margin: 16px 0 0 0;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   padding: 4px 8px;
-  transition: 0.3s ease-in-out;
   border: none;
   border-radius: 8px;
 }

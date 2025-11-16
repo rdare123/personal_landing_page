@@ -1,6 +1,8 @@
 .introduction {
   display: flex;
   flex-direction: row;
+  width: 87.5%;
+  margin: 0 auto;
 }
 
 .introduction__content {
@@ -46,8 +48,12 @@
 
   .introduction__title {
     line-height: 0.86;
-    font-size: 72;
+    font-size: 48px;
     margin-top: 15px;
+  }
+
+  .introduction__subtitle {
+    margin: 15px 0 0 0;
   }
 
   .introduction__img {
