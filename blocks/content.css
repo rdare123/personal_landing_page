@@ -1,3 +1,9 @@
 .content {
   max-width: 1440px;
 }
+
+.content__divider {
+  border-bottom: #ffffff45 solid 1px;
+  width: 75%;
+  margin: 40px auto;
+}

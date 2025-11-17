@@ -33,26 +33,24 @@ const photoCards = [
 
 const designCards = [
   {
-    name: "Fallout Pip-Boy",
-    img: null,
-    link: null,
-    desc: "",
+    name: "Pip-Boy",
+    img: "images/pip-boy.jpg",
+    link: "#",
   },
   {
     name: "Cyberpunk",
-    img: null,
-    link: null,
-    desc: "",
+    img: "images/cyberpunk.jpg",
+    link: "https://play.google.com/store/apps/details?id=com.silversun.cyberpunkwatchface&pcampaignid=web_share",
   },
   {
     name: "Digital OLED",
-    img: "https://i.redd.it/yyqdmxh3ehbc1.jpeg",
-    link: null,
-    desc: "",
+    img: "images/digital-oled.jpg",
+    link: "https://play.google.com/store/apps/details?id=com.silversun.digital_oled&pcampaignid=web_share",
   },
 ];
 
 const previewModal = document.querySelector("#preview-modal");
+const errorModal = document.querySelector("#not-on-store-popup");
 const modalClose = previewModal.querySelector(".modal__close-btn");
 const previewImg = previewModal.querySelector(".modal__image");
 const previewCaption = previewModal.querySelector(".modal__caption");
@@ -121,9 +119,21 @@ function getDesignCardElement(data) {
 
   cardImage.src = data.img;
   cardImage.alt = data.name;
-  cardOpenLink.textContent = "Play Store";
   cardOpenLink.href = data.link;
   cardTitle.textContent = data.name;
+
+  if (data.link != "#") {
+    cardOpenLink.textContent = "Play Store";
+  } else {
+    cardOpenLink.textContent = "Not on the Play Store!";
+    cardOpenLink.classList.add("card__open-ext_type_disabled");
+  }
+
+  cardOpenLink.addEventListener("click", (event) => {
+    if (data.link == "#") {
+      event.preventDefault();
+    }
+  });
 
   cardImage.addEventListener("click", () => {
     const cardTitle = cardElement.querySelector(".card__title");

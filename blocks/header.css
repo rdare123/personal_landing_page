@@ -32,11 +32,7 @@
 }
 
 .header__logo {
-  margin: 0;
-  font-size: 16px;
-  font-family: "Rajdhani", Arial, sans-serif;
-  font-weight: 750;
-  color: #ffffffbb;
+  height: 40px;
 }
 
 .header__contact {
@@ -73,13 +69,21 @@
   .header__nav-links {
     gap: 6px;
     font-size: 8px;
+    padding: 8px 0;
+  }
+
+  .header__decoration {
+    visibility: visible;
+  }
+
+  .header__logo {
+    margin: 8px 0 0 0;
+    height: 35px;
   }
 
   .header__nav {
-    height: 40px;
-  }
-
-  .header__nav-container {
-    height: 40px;
+    height: 88px;
+    width: 90%;
+    flex-direction: column;
   }
 }
