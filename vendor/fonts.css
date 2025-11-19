@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Rajdhani";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./fonts/Rajdhani-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Metrophobic";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./fonts/Rajdhani-Medium.ttf") format("truetype");
+}

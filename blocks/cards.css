@@ -16,7 +16,7 @@
   align-self: center;
   background-color: transparent;
   color: #ffffffbb;
-  margin: 16px 0 0 0;
+  margin: 8px 0 0 0;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   padding: 4px 8px;
@@ -32,7 +32,7 @@
 .cards__container {
   display: grid;
   list-style-type: none;
-  grid-template-columns: repeat(auto-fit, 330px);
+  grid-template-columns: repeat(auto-fit, 350px);
   column-gap: 20px;
   row-gap: 40px;
   padding: 0;

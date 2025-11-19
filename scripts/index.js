@@ -112,10 +112,10 @@ function getCardElement(data) {
 }
 
 function getDesignCardElement(data) {
-  const cardElement = designCardTemplate.cloneNode(true);
-  const cardTitle = cardElement.querySelector(".card__caption");
-  const cardOpenLink = cardElement.querySelector(".card__open-ext");
-  const cardImage = cardElement.querySelector(".card__img");
+  const designCardElement = designCardTemplate.cloneNode(true);
+  const cardTitle = designCardElement.querySelector(".card__caption");
+  const cardOpenLink = designCardElement.querySelector(".card__open-ext");
+  const cardImage = designCardElement.querySelector(".card__img");
 
   cardImage.src = data.img;
   cardImage.alt = data.name;
@@ -136,17 +136,18 @@ function getDesignCardElement(data) {
   });
 
   cardImage.addEventListener("click", () => {
-    const cardTitle = cardElement.querySelector(".card__title");
-    const cardImage = cardElement.querySelector(".card__image");
+    const cardTitle = designCardElement.querySelector(".card__title");
+    const cardImage = designCardElement.querySelector(".card__image");
 
     previewImg.src = data.img;
     previewImg.alt = data.name;
     previewCaption.textContent = data.name;
+    previewCaptionGear.textContent = null;
 
     openModal(previewModal);
   });
 
-  return cardElement;
+  return designCardElement;
 }
 
 photoCards.forEach((card) => {

@@ -67,9 +67,11 @@
 
 @media screen and (max-width: 627px) {
   .header__nav-links {
-    gap: 6px;
-    font-size: 8px;
     padding: 8px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
   }
 
   .header__decoration {
@@ -82,8 +84,14 @@
   }
 
   .header__nav {
-    height: 88px;
+    height: 93px;
+    padding-bottom: 15px;
     width: 90%;
     flex-direction: column;
+  }
+
+  .header__nav-container {
+    height: 93px;
+    padding-bottom: 15px;
   }
 }
