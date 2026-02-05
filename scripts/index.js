@@ -49,6 +49,19 @@ const designCards = [
   },
 ];
 
+const softwareCards = [
+  {
+    name: "Spots (For TripleTen)",
+    img: "images/spots.png",
+    link: "https://github.com/rdare123/se_project_spots",
+  },
+  {
+    name: "Cyberpunk",
+    img: "images/cyberpunk.jpg",
+    link: "https://play.google.com/store/apps/details?id=com.silversun.cyberpunkwatchface&pcampaignid=web_share",
+  },
+];
+
 const previewModal = document.querySelector("#preview-modal");
 const errorModal = document.querySelector("#not-on-store-popup");
 const modalClose = previewModal.querySelector(".modal__close-btn");
@@ -58,12 +71,19 @@ const previewCaptionGear = previewModal.querySelector(".modal__caption-gear");
 
 const photoCardContainer = document.querySelector("#photo-card-container");
 const designCardContainer = document.querySelector("#design-card-container");
+const programCardContainer = document.querySelector(
+  "#programming-card-container"
+);
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
 
 const designCardTemplate = document
   .querySelector("#card-template-design")
+  .content.querySelector(".card");
+
+const programCardTemplate = document
+  .querySelector("#card-template-programming")
   .content.querySelector(".card");
 
 modalClose.addEventListener("click", function () {
@@ -150,6 +170,46 @@ function getDesignCardElement(data) {
   return designCardElement;
 }
 
+function getProgramCardElement(data) {
+  const programCardElement = programCardTemplate.cloneNode(true);
+  const cardTitle = programCardElement.querySelector(".card__caption");
+  const cardOpenLink = programCardElement.querySelector(".card__open-ext");
+  const cardImage = programCardElement.querySelector(".card__img");
+
+  cardImage.src = data.img;
+  cardImage.alt = data.name;
+  cardOpenLink.href = data.link;
+  cardTitle.textContent = data.name;
+  cardImage.classList.add("card__img_width_desktop");
+
+  if (data.link != "#") {
+    cardOpenLink.textContent = "GitHub";
+  } else {
+    cardOpenLink.textContent = "Not on the GitHub!";
+    cardOpenLink.classList.add("card__open-ext_type_disabled");
+  }
+
+  cardOpenLink.addEventListener("click", (event) => {
+    if (data.link == "#") {
+      event.preventDefault();
+    }
+  });
+
+  cardImage.addEventListener("click", () => {
+    const cardTitle = programCardElement.querySelector(".card__title");
+    const cardImage = programCardElement.querySelector(".card__image");
+
+    previewImg.src = data.img;
+    previewImg.alt = data.name;
+    previewCaption.textContent = data.name;
+    previewCaptionGear.textContent = null;
+
+    openModal(previewModal);
+  });
+
+  return programCardElement;
+}
+
 photoCards.forEach((card) => {
   const photo = getCardElement(card);
 
@@ -160,4 +220,10 @@ designCards.forEach((card) => {
   const designCard = getDesignCardElement(card);
 
   designCardContainer.prepend(designCard);
+});
+
+softwareCards.forEach((card) => {
+  const programmingCard = getProgramCardElement(card);
+
+  programCardContainer.prepend(programmingCard);
 });

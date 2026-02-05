@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Ryan's Landing Page</title>
   </head>
@@ -31,7 +32,7 @@
               <a href="#graphic-design" class="header__contact"
                 >GRAPHIC DESIGN</a
               >
-              <a href="#software-engineering" class="header__contact"
+              <a href="#programming" class="header__contact"
                 >PROGRAMMING</a
               >
               <a href="#contact" class="header__contact">CONTACT ME</a>
@@ -91,6 +92,26 @@
           >
           <ul class="cards__container" id="design-card-container">
             <template id="card-template-design">
+              <li class="cards__card card">
+                <img alt="" class="card__img" />
+                <div class="card__caption-ln">
+                  <button type="button" class="card__caption"></button>
+                  <a target="_blank" href="" class="card__open-ext"></a>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </section>
+
+                <div class="content__divider"></div>
+        
+        <section class="cards cards_type_programming" id="programming">
+          <h2 class="cards__title">Software I've Worked On</h2>
+          <a type="button" class="cards__contact"
+            >Want programming work done? Contact me!</a
+          >
+          <ul class="cards__container" id="programming-card-container">
+            <template id="card-template-programming">
               <li class="cards__card card">
                 <img alt="" class="card__img" />
                 <div class="card__caption-ln">
