@@ -59,7 +59,7 @@
   text-align: center;
   gap: 12px;
   margin: 0;
-  font-size: 12px;
+  font-size: 18px;
   font-family: "Rajdhani", Arial, sans-serif;
   font-weight: 750;
   color: #ffffffbb;
@@ -72,6 +72,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-row-gap: 5px;
+    font-size: 12px;
   }
 
   .header__decoration {

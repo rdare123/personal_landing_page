@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
@@ -30,6 +30,12 @@
 .footer__item:hover {
   background-color: #21212121;
   transition: 0.3s ease-in-out;
+}
+
+.footer__copyright {
+  display: flex;
+  padding-top: 20px;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 627px) {

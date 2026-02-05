@@ -13,6 +13,10 @@
   cursor: pointer;
 }
 
+.card__img_width_desktop {
+  aspect-ratio: 16/9;
+}
+
 .card__img:hover {
   opacity: 0.75;
   transition: 0.3s ease-in-out;
@@ -73,6 +77,6 @@
 
 @media screen and (max-width: 627px) {
   .card {
-    width: 80%;
+    width: 70%;
   }
 }
