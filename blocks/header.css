@@ -10,14 +10,12 @@
   z-index: 1;
   width: 100%;
   margin: 0 auto 20px;
-  padding: 0;
 }
 
 .header__nav {
   z-index: 1;
   width: 90%;
   height: 80px;
-  padding: 0 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -33,6 +31,10 @@
 
 .header__logo {
   height: 40px;
+}
+
+.header__logo-container {
+  padding: 0 20px;
 }
 
 .header__contact {
@@ -59,6 +61,7 @@
   text-align: center;
   gap: 12px;
   margin: 0;
+  padding: 0 20px;
   font-size: 18px;
   font-family: "Rajdhani", Arial, sans-serif;
   font-weight: 750;
