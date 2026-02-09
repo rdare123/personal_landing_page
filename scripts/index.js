@@ -56,9 +56,9 @@ const softwareCards = [
     link: "https://github.com/rdare123/se_project_spots",
   },
   {
-    name: "Cyberpunk",
+    name: "My Minecraft Mod",
     img: "images/cyberpunk.jpg",
-    link: "https://play.google.com/store/apps/details?id=com.silversun.cyberpunkwatchface&pcampaignid=web_share",
+    link: "https://www.curseforge.com/minecraft-bedrock/addons/magicraft-spells-magical-items",
   },
 ];
 
@@ -72,7 +72,7 @@ const previewCaptionGear = previewModal.querySelector(".modal__caption-gear");
 const photoCardContainer = document.querySelector("#photo-card-container");
 const designCardContainer = document.querySelector("#design-card-container");
 const programCardContainer = document.querySelector(
-  "#programming-card-container"
+  "#programming-card-container",
 );
 const cardTemplate = document
   .querySelector("#card-template")
@@ -182,7 +182,12 @@ function getProgramCardElement(data) {
   cardTitle.textContent = data.name;
   cardImage.classList.add("card__img_width_desktop");
 
-  if (data.link != "#") {
+  if (
+    data.link ==
+    "https://www.curseforge.com/minecraft-bedrock/addons/magicraft-spells-magical-items"
+  ) {
+    cardOpenLink.textContent = "CurseForge";
+  } else if (data.link != "#") {
     cardOpenLink.textContent = "GitHub";
   } else {
     cardOpenLink.textContent = "Not on the GitHub!";

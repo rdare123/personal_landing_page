@@ -16,6 +16,7 @@
   align-self: center;
   background-color: transparent;
   color: #ffffffbb;
+  text-decoration: none;
   margin: 8px 0 0 0;
   cursor: pointer;
   transition: 0.3s ease-in-out;
