@@ -50,8 +50,42 @@
 }
 
 .header__contact:hover {
-  background-color: #21212120;
+  background-color: #44d62c20;
+  color: #44d62c;
   transition: 0.3s ease-in-out;
+}
+
+.header__hirable {
+  background-color: #44d62c20;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0;
+  padding: 4px 8px;
+  transition: 0.3s ease-in-out;
+  border-radius: 8px;
+  border: solid 1px #88fa6f20;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__hirable:hover {
+  background-color: #44d62c30;
+  color: #44d62c;
+  transition: 0.3s ease-in-out;
+}
+
+.header__hirable_dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #44d62c;
+}
+
+.header__hirable_text {
+  color: #44d62cbb;
+  text-decoration: none;
 }
 
 .header__nav-links {
@@ -64,7 +98,7 @@
   padding: 0 20px;
   font-size: 18px;
   font-family: "Rajdhani", Arial, sans-serif;
-  font-weight: 750;
+  font-weight: 400;
   color: #ffffffbb;
 }
 
@@ -78,10 +112,6 @@
     font-size: 12px;
   }
 
-  .header__decoration {
-    visibility: visible;
-  }
-
   .header__logo {
     margin: 8px 0 0 0;
     height: 35px;
@@ -89,7 +119,7 @@
 
   .header__nav {
     height: 93px;
-    padding-bottom: 15px;
+    padding-bottom: 23px;
     flex-direction: column;
   }
 

@@ -14,19 +14,21 @@
 .cards__contact {
   font-family: "Rajdhani", Arial, sans-serif;
   align-self: center;
-  background-color: transparent;
+  background-color: #44d62c15;
   color: #ffffffbb;
   text-decoration: none;
   margin: 8px 0 0 0;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   padding: 4px 8px;
-  border: none;
+  border: solid 1px #88fa6f05;
   border-radius: 8px;
 }
 
 .cards__contact:hover {
-  background-color: #21212120;
+  background-color: #44d62c20;
+  color: #44d62c;
+  border: solid 1px #88fa6f20;
   transition: 0.3s ease-in-out;
 }
 

@@ -82,6 +82,17 @@
   color: #ffffffaa;
 }
 
+.modal__contact-container {
+  background-color: #212121aa;
+  border: solid 1px #212121;
+  border-radius: 8px;
+  position: relative;
+  align-self: center;
+  max-width: 80vw;
+  max-height: 80vh;
+  padding: 20px;
+}
+
 @media screen and (max-width: 627px) {
   .modal__container {
     max-width: 300px;

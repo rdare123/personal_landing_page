@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Metrophobic&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -23,11 +20,13 @@
         <div class="header__nav-container">
         <nav class="header__nav">
           <div class="header__logo-container">
-          <div class="header__decoration"></div>
             <img src="./images/dare-logo-light.svg" alt="DARE Photography & Design logo" class="header__logo">
-            <div class="header__decoration"></div>
             </div>
             <div class="header__nav-links">
+              <div class="header__hirable">
+                <div class="header__hirable_dot"></div>
+                <a href="#" class="header__hirable_text">AVAILABLE NOW</a>
+              </div>
               <a href="#photography" class="header__contact">PHOTOGRAPHY</a>
               <a href="#graphic-design" class="header__contact"
                 >GRAPHIC DESIGN</a
@@ -35,7 +34,6 @@
               <a href="#programming" class="header__contact"
                 >PROGRAMMING</a
               >
-              <a href="mailto:ryandare12345@gmail.com" class="header__contact">CONTACT ME</a>
             </div>
           </div>
         </nav>
@@ -105,7 +103,7 @@
         <section class="cards cards_type_programming" id="programming">
           <h2 class="cards__title">Software I've Worked On</h2>
           <a type="button" class="cards__contact" href="mailto:ryandare12345@gmail.com"
-            >Want programming work done? Contact me!</a
+            >View more on GitHub!</a
           >
           <ul class="cards__container" id="programming-card-container">
             <template id="card-template-programming">
@@ -167,6 +165,51 @@
         </div>
       </div>
     </div>
+
+    <div class="modal" id="contact-modal">
+        <div class="modal__contact-container">
+          <form class="modal__form form">
+            <fieldset class="form__fieldset">
+              <div class="form__heading-row">
+                <h2 class="form__heading">CONTACT</h2>
+                <button class="form__close-btn" type="button">
+                  <img
+                    src="./images/close-icon-light.svg"
+                    alt="Close"
+                    class="form__close-btn-img"
+                  />
+                </button>
+              </div>
+
+              <label class="form__label"
+                >Your Email
+                <input
+                  type="email"
+                  class="form__text"
+                  placeholder="someone@gmail.com"
+                  id="email-input"
+                  required
+                />
+              </label>
+
+              <label class="form__label"
+                >Messages
+                <textarea
+                  type="text"
+                  class="form__text"
+                  placeholder="Type your message"
+                  id="message-input"
+                  required
+                  rows="4"
+                  cols="4"
+                ></textarea>
+              </label>
+
+              <button class="form__submit-btn" type="submit">SUBMIT</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
 
     <script src="./scripts/index.js"></script>
   </body>

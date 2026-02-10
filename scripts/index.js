@@ -69,6 +69,11 @@ const previewImg = previewModal.querySelector(".modal__image");
 const previewCaption = previewModal.querySelector(".modal__caption");
 const previewCaptionGear = previewModal.querySelector(".modal__caption-gear");
 
+const contactModal = document.querySelector("#contact-modal");
+const contactModalOpen = document.querySelector(".header__hirable");
+const contactModalClose = contactModal.querySelector(".form__close-btn");
+const contactForm = contactModal.querySelector(".modal__form");
+
 const photoCardContainer = document.querySelector("#photo-card-container");
 const designCardContainer = document.querySelector("#design-card-container");
 const programCardContainer = document.querySelector(
@@ -90,12 +95,29 @@ modalClose.addEventListener("click", function () {
   closeModal(previewModal);
 });
 
+contactModalOpen.addEventListener("click", function () {
+  openModal(contactModal);
+});
+
+contactModalClose.addEventListener("click", function () {
+  closeModal(contactModal);
+  contactForm.reset();
+});
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+}
+
+function handleEditProfileSubmit(e) {
+  e.preventDefault();
+
+  contactForm.reset();
+
+  closeModal(contactModal);
 }
 
 function getCardElement(data) {

@@ -20,6 +20,7 @@
 }
 
 .introduction__title {
+  font-family: "Nova Square";
   margin: 0;
   font-size: 72px;
   line-height: 0.57;
@@ -31,7 +32,7 @@
 }
 
 .introduction__subtitle {
-  font-family: "Rajdhani", Arial, sans-serif;
+  font-family: "Nova Square";
   font-weight: 750;
   font-size: 26px;
   line-height: 1.25;
