@@ -5,12 +5,12 @@
   align-items: center;
 }
 
-.header__nav-container {
+/*.header__nav-container {
   height: 80px;
   z-index: 1;
   width: 100%;
   margin: 0 auto 20px;
-}
+}*/
 
 .header__nav {
   z-index: 1;
@@ -22,7 +22,7 @@
   justify-self: center;
   align-items: center;
   position: fixed;
-  border: #e1e1e121 solid 1px;
+  border-bottom: #e1e1e121 solid 1px;
   /*border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;*/
   background-color: #21212120;
@@ -31,10 +31,37 @@
 
 .header__logo {
   height: 40px;
+  cursor: pointer;
+}
+
+.header__menu {
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 20px;
+  background-color: #44d62c15;
+  color: #ffffffbb;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 4px 8px;
+  transition: 0.3s ease-in-out;
+  border: solid 1px #88fa6f05;
+  border-radius: 8px;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  visibility: hidden;
+}
+
+.header__menu:hover {
+  background-color: #44d62c20;
+  color: #44d62c;
+  border: solid 1px #88fa6f20;
+  transition: 0.3s ease-in-out;
 }
 
 .header__logo-container {
-  padding: 8px 0 0 20px;
+  padding: 8px 20px 0 20px;
+  margin: 0;
 }
 
 .header__contact {
@@ -53,6 +80,12 @@
   background-color: #44d62c20;
   color: #44d62c;
   transition: 0.3s ease-in-out;
+}
+
+.header__contact_selected {
+  color: #44d62c;
+  cursor: not-allowed;
+  text-decoration: none;
 }
 
 .header__hirable {
@@ -103,6 +136,18 @@
 }
 
 @media screen and (max-width: 627px) {
+  .header__nav {
+    height: 45px;
+    padding-bottom: 23px;
+    flex-direction: column;
+    transition: 0.15s ease-in-out;
+  }
+
+  .header__nav_type_expand {
+    height: 100px;
+    transition: 0.15s ease-in-out;
+  }
+
   .header__nav-links {
     padding: 8px 0;
     display: grid;
@@ -110,17 +155,33 @@
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     font-size: 12px;
+    visibility: collapse;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .header__nav-links_type_expand {
+    visibility: visible;
+    opacity: 100%;
+    transition: 0.3s ease-in-out;
+  }
+
+  .header__logo-container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 8px;
   }
 
   .header__logo {
-    margin: 8px 0 0 0;
     height: 35px;
   }
 
-  .header__nav {
-    height: 93px;
-    padding-bottom: 23px;
-    flex-direction: column;
+  .header__menu {
+    margin-left: auto;
+    visibility: visible;
   }
 
   .header__nav-container {

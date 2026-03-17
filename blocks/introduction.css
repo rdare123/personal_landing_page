@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: row;
   width: 87.5%;
+  height: 700px;
   margin: 0 auto;
+  align-items: center;
 }
 
 .introduction__content {
@@ -12,7 +14,8 @@
 }
 
 .introduction__img {
-  max-width: 175px;
+  max-width: 300px;
+  max-height: 300px;
   margin-right: 20px;
   border-radius: 8px;
   aspect-ratio: 1/1;
@@ -22,44 +25,33 @@
 .introduction__title {
   font-family: "Nova Square";
   margin: 0;
+  padding: 15px 0 0 0;
   font-size: 72px;
   line-height: 0.57;
   color: #ffffffbb;
 }
 
-.introduction__title_nickname {
-  font-size: 32px;
-}
-
-.introduction__subtitle {
-  font-family: "Nova Square";
-  font-weight: 750;
-  font-size: 26px;
-  line-height: 1.25;
-  margin: 30px 0 0 0;
-  color: #ffffffbb;
-}
-
 .introduction__body {
   font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 30px;
   margin: 15px 0 0 0;
   color: #ffffffbb;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 768px) {
   .introduction {
     flex-direction: column;
   }
 
   .introduction__title {
     line-height: 0.86;
-    font-size: 48px;
+    font-size: 42px;
     margin-top: 15px;
     text-align: center;
   }
 
-  .introduction__subtitle {
-    margin: 15px 0 0 0;
+  .introduction__body {
+    font-size: 18px;
   }
 
   .introduction__img {

@@ -1,7 +1,7 @@
 const photoCards = [
   {
-    name: "A Chevy Impala",
-    link: "https://i.redd.it/nm5bawp9v6pf1.jpeg",
+    name: "A Kia K5",
+    link: "https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/644340244_122105684403253342_6025290323755446755_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2a1932&_nc_ohc=h0NzTTGCJgYQ7kNvwGBUPbi&_nc_oc=Adkk8qqvcyOZZwtDPHGvFm5S92tcYFz8IsSlui04XmJmHWwz74zvwLvDQ7objG3n-4cragEqaI_aUtgUd8h7yjQI&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=IymbIeqscrUXxIHppldADg&_nc_ss=8&oh=00_Afws5A-htuD5m73ibuCfq-3V5cgPf-TDKWxnjYWhdaqsgw&oe=69AAF9CC",
     gear: "camera",
   },
   {
@@ -31,7 +31,7 @@ const photoCards = [
   },
 ];
 
-const designCards = [
+/*const designCards = [
   {
     name: "Pip-Boy",
     img: "images/pip-boy.jpg",
@@ -60,7 +60,7 @@ const softwareCards = [
     img: "images/cyberpunk.jpg",
     link: "https://www.curseforge.com/minecraft-bedrock/addons/magicraft-spells-magical-items",
   },
-];
+];*/
 
 const previewModal = document.querySelector("#preview-modal");
 const errorModal = document.querySelector("#not-on-store-popup");
@@ -83,8 +83,19 @@ const designCardContainer = document.querySelector("#design-card-container");
 const programCardContainer = document.querySelector(
   "#programming-card-container",
 );
+const cardTemplate = document
+  .querySelector("#card-template")
+  .content.querySelector(".card");
 
 let menuOpen = false;
+
+/*const designCardTemplate = document
+  .querySelector("#card-template-design")
+  .content.querySelector(".card");
+
+const programCardTemplate = document
+  .querySelector("#card-template-programming")
+  .content.querySelector(".card");*/
 
 menuButton.addEventListener("click", function () {
   if (menuOpen == false || menuOpen == undefined) {
@@ -96,6 +107,10 @@ menuButton.addEventListener("click", function () {
     navBar.classList.remove("header__nav_type_expand");
     navLinks.classList.remove("header__nav-links_type_expand");
   }
+});
+
+modalClose.addEventListener("click", function () {
+  closeModal(previewModal);
 });
 
 contactModalOpen.addEventListener("click", function () {
@@ -115,10 +130,49 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
-function handleContactFormSubmit(e) {
+function handleContactSubmit(e) {
   e.preventDefault();
 
   contactForm.reset();
 
   closeModal(contactModal);
 }
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.cloneNode(true);
+  const cardTitle = cardElement.querySelector(".card__caption");
+  const cardOpenLink = cardElement.querySelector(".card__open-ext");
+  const cardImage = cardElement.querySelector(".card__img");
+
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  cardOpenLink.textContent = data.link;
+  cardOpenLink.href = data.link;
+  cardTitle.textContent = data.name;
+
+  cardImage.addEventListener("click", () => {
+    const cardTitle = cardElement.querySelector(".card__title");
+    const cardImage = cardElement.querySelector(".card__image");
+
+    previewImg.src = data.link;
+    previewImg.alt = data.name;
+    previewCaption.textContent = data.name;
+    previewCaptionGear.textContent = data.gear;
+
+    if (data.gear == "camera") {
+      previewCaptionGear.textContent = "Canon EOS Rebel T6";
+    } else if (data.gear == "phone") {
+      previewCaptionGear.textContent = "Samsung Galaxy S24+";
+    }
+
+    openModal(previewModal);
+  });
+
+  return cardElement;
+}
+
+photoCards.forEach((card) => {
+  const photo = getCardElement(card);
+
+  photoCardContainer.prepend(photo);
+});

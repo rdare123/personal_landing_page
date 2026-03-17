@@ -1,0 +1,33 @@
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.columns__content {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+}
+
+.columns__title {
+  font-family: "Nova Square";
+  margin: 0;
+  padding: 15px 0 0 0;
+  font-size: 72px;
+  line-height: 0.57;
+  color: #ffffffbb;
+}
+
+.columns__body {
+  font-family: "Rajdhani", Arial, sans-serif;
+  max-width: 400px;
+  margin: 15px 0 0 0;
+  color: #ffffffbb;
+}
+
+.columns__picture {
+  max-width: 170px;
+  justify-self: center;
+}

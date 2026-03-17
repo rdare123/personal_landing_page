@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
     <link
@@ -12,14 +12,14 @@
     />
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="./pages/index.css" />
-    <title>DARE Photography & Design</title>
+    <title>Photography</title>
   </head>
-  <body class="body">
+    <body class="body">
     <div class="page">
       <header class="header">
         <div class="header__nav-container">
         <nav class="header__nav">
-          <ul class="header__logo-container" href="./index.html">
+          <ul class="header__logo-container">
             <a href="./index.html" target="_self"><img src="./images/dare-logo-light.svg" alt="DARE Photography & Design logo" class="header__logo"></a>
             <button class="header__menu">MENU</button>
           </ul>
@@ -28,7 +28,7 @@
                 <div class="header__hirable_dot"></div>
                 <a href="#" class="header__hirable_text">AVAILABLE NOW</a>
               </div>
-              <a href="./photography.html" class="header__contact">PHOTOGRAPHY</a>
+              <a href="#" class="header__contact">PHOTOGRAPHY</a>
               <a href="./not-available.html" class="header__contact"
                 >GRAPHIC DESIGN</a
               >
@@ -41,22 +41,22 @@
       </header>
 
       <main class="content">
-        <section class="overview">
-          <div class="overview__caption-ln"><h1 class="overview__title">Meet Ryan</h1>
-             <!-- <div class="overview__caption_resume">
-                  <img src="./images/download-arrow.svg" alt="Download button" class="overview__resume_download">
-                  <a href="#" class="overview__resume_text">DOWNLOAD MY RESUME</a>
-              </div> not yet complete -->
-            </div>
-          <p class="overview__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </section>
-
-        <section class="introduction">
-              <img src="./images/profile_picture.jpg" alt="" class="introduction__img"/>
-              <div class="introduction__content">
-                <h1 class="introduction__title">Who Am I?</h1>
-                <p class="introduction__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
+        <section class="cards cards_type_photo" id="photography">
+          <h2 class="cards__title">Photgraphy I've Done</h2>
+          <a type="button" class="cards__contact" href="https://www.instagram.com/darephotographydesign/" target="_blank"
+            >View more photos on Instagram!</a
+          >
+          <ul class="cards__container" id="photo-card-container">
+            <template id="card-template">
+              <li class="cards__card card">
+                <img alt="" class="card__img" />
+                <div class="card__caption-ln">
+                  <button type="button" class="card__caption"></button>
+                  <a target="_blank" href="" class="card__open-ext"></a>
+                </div>
+              </li>
+            </template>
+          </ul>
         </section>
       </main>
 
@@ -154,6 +154,6 @@
         </div>
       </div>
 
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/photography.js"></script>
   </body>
 </html>
