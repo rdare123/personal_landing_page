@@ -1,10 +1,5 @@
 const photoCards = [
   {
-    name: "A Kia K5",
-    link: "https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/644340244_122105684403253342_6025290323755446755_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2a1932&_nc_ohc=h0NzTTGCJgYQ7kNvwGBUPbi&_nc_oc=Adkk8qqvcyOZZwtDPHGvFm5S92tcYFz8IsSlui04XmJmHWwz74zvwLvDQ7objG3n-4cragEqaI_aUtgUd8h7yjQI&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=IymbIeqscrUXxIHppldADg&_nc_ss=8&oh=00_Afws5A-htuD5m73ibuCfq-3V5cgPf-TDKWxnjYWhdaqsgw&oe=69AAF9CC",
-    gear: "camera",
-  },
-  {
     name: "Air Max 90's",
     link: "https://i.redd.it/cyv6vztkkinf1.jpeg",
     gear: "camera",
@@ -27,6 +22,16 @@ const photoCards = [
   {
     name: "Path Lights",
     link: "https://pbs.twimg.com/media/GzMvDO4XgAEuuOe?format=jpg&name=large",
+    gear: "camera",
+  },
+  {
+    name: "Cat.",
+    link: "https://i.redd.it/jkz2vw25xcpg1.jpeg",
+    gear: "camera",
+  },
+  {
+    name: "Downtown",
+    link: "https://i.redd.it/cmmj66qhnjog1.jpeg",
     gear: "camera",
   },
 ];

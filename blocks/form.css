@@ -32,6 +32,7 @@
 }
 
 .form__close-btn-img {
+  padding: 8px;
   opacity: 0.4;
   transition: 0.3s ease-in-out;
 }
