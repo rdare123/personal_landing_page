@@ -28,7 +28,8 @@
 }
 
 .footer__item:hover {
-  background-color: #21212121;
+  background-color: #44d62c30;
+  color: #44d62c;
   transition: 0.3s ease-in-out;
 }
 

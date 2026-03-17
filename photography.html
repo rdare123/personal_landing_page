@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Photography</title>
+  </head>
+    <body class="body">
+    <div class="page">
+      <header class="header">
+        <div class="header__nav-container">
+        <nav class="header__nav">
+          <ul class="header__logo-container">
+            <a href="./index.html" target="_self"><img src="./images/dare-logo-light.svg" alt="DARE Photography & Design logo" class="header__logo"></a>
+            <button class="header__menu">MENU</button>
+          </ul>
+            <div class="header__nav-links">
+              <div class="header__hirable">
+                <div class="header__hirable_dot"></div>
+                <a href="#" class="header__hirable_text">AVAILABLE NOW</a>
+              </div>
+              <a href="#" class="header__contact">PHOTOGRAPHY</a>
+              <a href="./not-available.html" class="header__contact"
+                >GRAPHIC DESIGN</a
+              >
+              <a href="./not-available.html" class="header__contact"
+                >PROGRAMMING</a
+              >
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main class="content">
+        <section class="cards cards_type_photo" id="photography">
+          <h2 class="cards__title">Photgraphy I've Done</h2>
+          <a type="button" class="cards__contact" href="https://www.instagram.com/darephotographydesign/" target="_blank"
+            >View more photos on Instagram!</a
+          >
+          <ul class="cards__container" id="photo-card-container">
+            <template id="card-template">
+              <li class="cards__card card">
+                <img alt="" class="card__img" />
+                <div class="card__caption-ln">
+                  <button type="button" class="card__caption"></button>
+                  <a target="_blank" href="" class="card__open-ext"></a>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </section>
+      </main>
+
+      <div class="page__divider"></div>
+
+      <footer class="footer">
+        <ul class="footer__contacts">
+          <li class="footer__list">
+            <a
+              class="footer__item"
+              target="_blank"
+              href="https://www.x.com/emotatertot__"
+              >X</a
+            >
+            <a
+              class="footer__item"
+              target="_blank"
+              href="https://www.instagram.com/emo_tater_tot"
+              >INSTAGRAM</a
+            >
+            <a
+              class="footer__item"
+              target="_blank"
+              href="https://www.tiktok.com/@bookitty719"
+              >TIKTOK</a
+            >
+            <a
+              class="footer__item"
+              target="_blank"
+              href="https://github.com/rdare123"
+              >GITHUB</a
+            >
+          </li>
+        </ul>
+
+        <p class="footer__copyright">©Ryan Dare 2026</p>
+      </footer>
+    </div>
+
+    <div class="modal" id="preview-modal">
+      <div class="modal__img-container">
+        <button class="modal__close-btn" type="button"></button>
+        <img alt="Close" class="modal__image" />
+        <div class="modal__caption-bg">
+          <p class="modal__caption"></p>
+          <p class="modal__caption-gear"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="contact-modal">
+        <div class="modal__contact-container">
+          <form class="modal__form form" action="https://formsubmit.co/ryandare12345@gmail.com" method="post">
+            <fieldset class="form__fieldset">
+              <div class="form__heading-row">
+                <h2 class="form__heading">Contact</h2>
+                <button class="form__close-btn" type="button">
+                  <img
+                    src="./images/close-icon-light.svg"
+                    alt="Close"
+                    class="form__close-btn-img"
+                  />
+                </button>
+              </div>
+
+              <label class="form__label"
+                >Your Email
+                <input
+                  type="email"
+                  name="email"
+                  class="form__text"
+                  placeholder="someone@gmail.com"
+                  id="email-input"
+                  required
+                />
+              </label>
+
+              <label class="form__label"
+                >Messages
+                <textarea
+                  type="text"
+                  name="message"
+                  class="form__text"
+                  placeholder="Type your message"
+                  id="message-input"
+                  required
+                  rows="4"
+                  cols="4"
+                ></textarea>
+              </label>
+
+              <button class="form__submit-btn" type="submit">SUBMIT</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+    <script src="./scripts/photography.js"></script>
+  </body>
+</html>
