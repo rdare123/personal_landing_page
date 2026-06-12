@@ -1,33 +1,23 @@
 // Example collections data — replace with your real sets or load dynamically
 const COLLECTIONS = [
   {
-    id: "shoes",
-    title: "Shoes — Studio Set",
-    url: "https://www.google.com/search?q=shoes+studio",
+    id: "0001",
+    title: "Dolce & Gabbana, Light Blue",
+    url: "https://www.instagram.com/p/DZZ6TC_EaAt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     photos: [
-      "https://i.redd.it/cyv6vztkkinf1.jpeg",
-      "https://i.redd.it/jkz2vw25xcpg1.jpeg",
-      "https://i.redd.it/cmmj66qhnjog1.jpeg",
+      "./images/0001/IMG_3944 (2).jpg",
+      "./images/0001/IMG_3955 (1).jpg",
+      "./images/0001/IMG_3961 (1).jpg",
     ],
   },
   {
-    id: "accessories",
-    title: "Accessories — Product Pack",
-    url: "https://www.google.com/search?q=accessories+product+pack",
+    id: "0002",
+    title: "Uniball Co., Kuru Toga",
+    url: "https://www.instagram.com/p/DZf5IftkQVr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     photos: [
-      "https://cf.preview.redd.it/just-started-yesterday-v0-hvcj8uog393h1.jpg?width=1080&crop=smart&auto=webp&s=309ac606c05b53b723134abe425bde044d378c21",
-      "https://cf.preview.redd.it/just-started-yesterday-v0-ys4jbucg393h1.jpg?width=1080&crop=smart&auto=webp&s=03c5741fd8cd408796fb2245902e3851a8a74736",
-      "https://pbs.twimg.com/media/GzMvDLTXkAAam57?format=jpg&name=large",
-    ],
-  },
-  {
-    id: "lifestyle",
-    title: "Lifestyle — Downtown",
-    url: "https://www.google.com/search?q=lifestyle+downtown",
-    photos: [
-      "https://i.redd.it/d6mgago28exg1.jpeg",
-      "https://pbs.twimg.com/media/GzMvDO4XgAEuuOe?format=jpg&name=large",
-      "https://i.redd.it/xmbdntunvrkf1.jpeg",
+      "./images/0002/IMG_3728.jpg",
+      "./images/0002/IMG_3991.jpg",
+      "./images/0002/IMG_4007.jpg",
     ],
   },
 ];
