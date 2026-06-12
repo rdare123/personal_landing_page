@@ -7,7 +7,7 @@ const COLLECTIONS = [
     photos: [
       "./images/0001/IMG_3944 (2).jpg",
       "./images/0001/IMG_3955 (1).jpg",
-      "./images/0001/IMG_3961 (1).jpg",
+      "./images/0001/IMG_3963 (3).jpg",
     ],
   },
   {
