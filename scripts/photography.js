@@ -34,6 +34,31 @@ const photoCards = [
     link: "https://i.redd.it/cmmj66qhnjog1.jpeg",
     gear: "camera",
   },
+  {
+    name: "Kuru Toga",
+    link: "https://cf.preview.redd.it/just-started-yesterday-v0-ys4jbucg393h1.jpg?width=1080&crop=smart&auto=webp&s=03c5741fd8cd408796fb2245902e3851a8a74736",
+    gear: "camera2",
+  },
+  {
+    name: "Dolce & Gabbana Cologne",
+    link: "https://cf.preview.redd.it/just-started-yesterday-v0-hvcj8uog393h1.jpg?width=1080&crop=smart&auto=webp&s=309ac606c05b53b723134abe425bde044d378c21",
+    gear: "camera2",
+  },
+  {
+    name: "Traffic Light",
+    link: "https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/711687098_122116999053253342_1798948642692333299_n.jpg?stp=dst-jpg_tt6&cstp=mx1366x2048&ctp=s1366x2048&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Ezn7lCVcdP8Q7kNvwEYmuPV&_nc_oc=AdrGo_NoQaMtPljkuTAmG2QySz-7r7KHJB_fsUWBgZug0HM_9JtiOlpGkx2Wpi8ha9LgKDXSx42Zn9E2yfDPDHY-&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=K3xC6GWBzEMEklfPh8Ux8A&_nc_ss=7b2a8&oh=00_Af-cinf2lCPyl6jBRokY0TLY5iXPxxSqxTs5R7FWHemCTQ&oe=6A2B64C5",
+    gear: "camera2",
+  },
+  {
+    name: "Creek",
+    link: "https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/693453451_122114901411253342_3155020786017392387_n.jpg?stp=dst-jpg_tt6&cstp=mx1366x2048&ctp=s1366x2048&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=3aDAF67RyY0Q7kNvwHFLdP1&_nc_oc=AdoloS7s_YFI6UmL8PMjmFvChoFiPkdvMG2nIRdZMbR7PyAa_SRXGob-A0c60vcXPuZaS8rlzFwx567pdH5Wuoro&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=ja1lmD79Jm-d6esVmhN_Jw&_nc_ss=7b2a8&oh=00_Af8s9KkFbX3f8cRRFKiGVch90i-ILQOuhJMPbvS-Xddcyw&oe=6A2B4A70",
+    gear: "camera2",
+  },
+  {
+    name: "Cat in Sunlight",
+    link: "https://i.redd.it/d6mgago28exg1.jpeg",
+    gear: "camera2",
+  },
 ];
 
 /*const designCards = [
@@ -168,6 +193,8 @@ function getCardElement(data) {
       previewCaptionGear.textContent = "Canon EOS Rebel T6";
     } else if (data.gear == "phone") {
       previewCaptionGear.textContent = "Samsung Galaxy S24+";
+    } else if (data.gear == "camera2") {
+      previewCaptionGear.textContent = "Canon EOS R10";
     }
 
     openModal(previewModal);
@@ -181,3 +208,21 @@ photoCards.forEach((card) => {
 
   photoCardContainer.prepend(photo);
 });
+
+// collapse grid after 9 images and add toggle to reveal the rest
+photoCardContainer.classList.add("collapsed");
+const toggleBtn = document.getElementById("toggle-more");
+if (toggleBtn) {
+  if (photoCards.length <= 9) {
+    toggleBtn.style.display = "none";
+  } else {
+    toggleBtn.addEventListener("click", () => {
+      const expanded = toggleBtn.classList.toggle("expanded");
+      photoCardContainer.classList.toggle("collapsed", !expanded);
+      toggleBtn.setAttribute("aria-expanded", String(expanded));
+      toggleBtn.innerHTML = expanded
+        ? 'Show less <span class="cards__toggle-arrow">▲</span>'
+        : 'Show more <span class="cards__toggle-arrow">▼</span>';
+    });
+  }
+}

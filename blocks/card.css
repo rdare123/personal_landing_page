@@ -20,6 +20,8 @@
 .card__img:hover {
   opacity: 0.75;
   transition: 0.3s ease-in-out;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.6);
 }
 
 .card__caption-ln {

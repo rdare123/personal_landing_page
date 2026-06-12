@@ -12,7 +12,8 @@
     />
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="./pages/index.css" />
-    <title>Design</title>
+    <link rel="stylesheet" href="./blocks/collections.css" />
+    <title>Collections</title>
   </head>
     <body class="body">
     <div class="page">
@@ -28,12 +29,12 @@
                 <div class="header__hirable_dot"></div>
                 <a href="#" class="header__hirable_text">AVAILABLE NOW</a>
               </div>
-              <a href="#" class="header__contact">PHOTOGRAPHY</a>
-              <a href="#graphic-design" class="header__contact"
+              <a href="./photography.html" class="header__contact">PHOTOGRAPHY</a>
+              <a href="./not-available.html" class="header__contact"
                 >GRAPHIC DESIGN</a
               >
               <a href="./collections.html" class="header__contact"
-                >COLLECTIONS</a
+                >COLLCECTIONS</a
               >
             </div>
           </div>
@@ -41,22 +42,9 @@
       </header>
 
       <main class="content">
-        <section class="cards cards_type_photo" id="design">
-          <h2 class="cards__title">Design Work I've Done</h2>
-          <a type="button" class="cards__contact" href="https://www.instagram.com/darephotographydesign/" target="_blank"
-            >View more designs on Instagram!</a
-          >
-          <ul class="cards__container" id="photo-card-container">
-            <template id="card-template">
-              <li class="cards__card card">
-                <img alt="" class="card__img" />
-                <div class="card__caption-ln">
-                  <button type="button" class="card__caption"></button>
-                  <a target="_blank" href="" class="card__open-ext"></a>
-                </div>
-              </li>
-            </template>
-          </ul>
+        <section class="cards collections" id="collections">
+          <h2 class="cards__title">Photography Collections</h2>
+          <ul id="collections-list"></ul>
         </section>
       </main>
 
@@ -154,6 +142,6 @@
         </div>
       </div>
 
-    <script src="./scripts/design.js"></script>
+    <script src="./scripts/collections.js"></script>
   </body>
 </html>
