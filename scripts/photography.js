@@ -59,6 +59,11 @@ const photoCards = [
     link: "https://i.redd.it/d6mgago28exg1.jpeg",
     gear: "camera2",
   },
+  {
+    name: "Naruto Figure",
+    link: "https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fp0786zw5dh8h1.jpeg",
+    gear: "camera2",
+  }
 ];
 
 /*const designCards = [
